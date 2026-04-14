@@ -1,29 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/14 15:58:30 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/14 17:20:30 by falves-e         ###   ########.fr       */
+/*   Created: 2026/04/14 17:19:46 by falves-e          #+#    #+#             */
+/*   Updated: 2026/04/14 17:31:31 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H 
-# define LIBFT_H
+#include "libft.h"
 
-# include <stdio.h>
+void	*ft_memmove(void *dest, const void *src, size_t n)
+{
+	size_t				i;
+	unsigned char		*temp;
+	const unsigned char	*origin;
+	unsigned char		*final;
 
-int		ft_isalnum(char c);
-int		ft_isalpha(char c);
-int		ft_isascii(char c);
-int		ft_isdigit(char c);
-int		ft_isprint(char c);
-int		ft_strlen(char *s);
-void	*ft_memset(void *s, int c, size_t n);
-void	*ft_memcpy(void *dest, const void *src, size_t n);
-void	*ft_memmove(void *dest, const void *src, size_t n);
-void	ft_bzero(void *s, size_t n);
-
-#endif
+	i = 0;
+	origin = (const unsigned char *) src;
+	final = (unsigned char *) dest;
+	while (i < n)
+	{
+		temp[i] = origin[i];
+		i++;
+	}
+	i = 0;
+	while (i < n)
+	{
+		final[i] = temp[i];
+		i++;
+	}
+	return (dest);
+}
