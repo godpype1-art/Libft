@@ -1,35 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/13 14:24:25 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/16 15:02:23 by falves-e         ###   ########.fr       */
+/*   Created: 2026/04/16 15:27:39 by falves-e          #+#    #+#             */
+/*   Updated: 2026/04/16 15:39:54 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s)
+int	ft_tolower(int c)
 {
-	int	len;
-
-	len = 0;
-	while (s && s[len] != '\0')
-		len++;
-	return (len);
+	if (c >= 'A' && c <= 'Z')
+		return (c - 'A' + 'a');
+	return (c);
 }
-
-/* #include <stdio.h>
-
-int main(void)
-{
-	char *s = "Helloo";
-	int result;
-
-	result = ft_strlen(s);
-	printf("%d", result);
-	return (0); 
-} */
