@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/20 14:10:43 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/20 16:00:21 by falves-e         ###   ########.fr       */
+/*   Created: 2026/04/20 16:18:58 by falves-e          #+#    #+#             */
+/*   Updated: 2026/04/20 16:19:56 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
 #include "libft.h"
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*str;
-	size_t	len_s;
 	
-	len_s = ft_strlen(s);
-	if (start + len > len_s)
-		len = len - start;
-	str = malloc(sizeof(char) * (len + 1));
-	if (str == NULL)
-		return (NULL);
-	*ft_memcpy(str, s + start, len);
-	return (str);
 }
