@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 15:58:30 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/20 14:10:38 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/20 14:13:18 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,7 @@ void	*ft_memset(void *s, int c, size_t n);
 char	*ft_strdup(const char *s);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
+
 
 #endif
