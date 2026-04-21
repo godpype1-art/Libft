@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 15:58:30 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/20 16:19:44 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/21 16:22:30 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int		ft_atoi(const char *nptr);
 void	ft_bzero(void *s, size_t n);
 int		ft_isalnum(char c);
 int		ft_isalpha(char c);
-int		ft_isascii(char c);
+int		ft_isascii(int c);
 int		ft_isdigit(char c);
 int		ft_isprint(char c);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -42,6 +42,5 @@ char	*ft_strjoin(char const *s1, char const *s2);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-
 
 #endif

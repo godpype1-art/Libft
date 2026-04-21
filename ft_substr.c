@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/20 14:10:43 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/20 19:47:56 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/21 13:46:42 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	str = malloc(sizeof(char) * (len + 1));
 	if (str == NULL)
 		return (NULL);
-	*ft_memcpy(str, s + start, len);
+	ft_memcpy(str, s + start, len);
 	str[len] = '\0';
 	return (str);
 }
