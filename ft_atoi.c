@@ -6,13 +6,13 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 17:43:36 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/20 13:21:22 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/21 16:56:19 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
 	int	i;
 	int	res;
