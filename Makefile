@@ -29,6 +29,7 @@ SRC = ft_atoi.c \
 	  ft_substr.c \
 	  ft_tolower.c \
 	  ft_toupper.c \
+	  ft_split.c \
 	  main.c
 
 OBJ = $(SRC:.c=.o)

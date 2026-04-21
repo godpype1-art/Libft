@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/14 18:53:53 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/21 19:20:20 by falves-e         ###   ########.fr       */
+/*   Created: 2026/04/21 18:40:56 by falves-e          #+#    #+#             */
+/*   Updated: 2026/04/21 19:29:41 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t size)
+char	**ft_split(char const *s, char c)
 {
+	char	**array;
 	size_t	i;
-	size_t	len;
+	size_t	word_count;
 
 	i = 0;
-	len = ft_strlen(src);
-	while (i < size - 1 && src[i] != '\0')
+	word_count = count_word(s, c);
+	array = malloc(sizeof(char *) * word_count + 1);
+	while (i < word_count)
 	{
-		dst[i] = src[i];
+		*array[i] = 
 		i++;
 	}
-	dst[i] = '\0';
-	return (len);
+	*array[i] = NULL;
+	return (array);
 }
