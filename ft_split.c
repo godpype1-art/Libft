@@ -12,6 +12,21 @@
 
 #include "libft.h"
 
+size_t	count_words(char const *s, char c)
+{
+	size_t	i;
+	size_t	word_count;
+
+	word_count = 0;
+	i = 0;
+	while (s[i] != '\0')
+	{
+		
+		i++;
+	}
+	return (word_count);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
@@ -23,7 +38,12 @@ char	**ft_split(char const *s, char c)
 	array = malloc(sizeof(char *) * word_count + 1);
 	while (i < word_count)
 	{
-		*array[i] = 
+		*array[i] = fill_word(s);
+		if (array[i] == NULL)
+		{
+			free_all(array);
+			return (NULL);
+		}
 		i++;
 	}
 	*array[i] = NULL;
