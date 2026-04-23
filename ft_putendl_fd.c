@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 16:18:19 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/23 16:21:19 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/23 20:40:50 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,5 +16,5 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	while (*s)
 		write(fd, s++, 1);
-	write(fd, '\n', 1);
+	write(fd, "\n", 1);
 }

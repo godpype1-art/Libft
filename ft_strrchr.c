@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 15:47:26 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/21 16:33:02 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/23 21:54:52 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,11 +21,11 @@ char	*ft_strrchr(const char *s, int c)
 	str = (char *)s;
 	while (str && len > 0)
 	{
-		if (str[len] == c)
-			return (str);
+		if (str[len] == (char)c)
+			return (str + len);
 		len--;
 	}
-	if (str[len] == c)
+	if (str[len] == (char)c)
 		return (str);
 	return (NULL);
 }
