@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 18:40:56 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/21 19:29:41 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/23 15:43:51 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static size_t	count_words(char const *s, char c)
 
 	word_count = 0;
 	i = 0;
-	in_word == 0;
+	in_word = 0;
 	while (s[i] != '\0')
 	{
 		if (s[i] != c && in_word == 0)
@@ -46,6 +46,8 @@ static char	*fill_word(char const *s, char c)
 	while (s[word_len] != c && s[word_len])
 		word_len++;
 	str = malloc(sizeof(char) * (word_len + 1));
+	if (str == NULL)
+		return (NULL);
 	ft_memcpy(str, s, word_len);
 	str[word_len] = '\0';
 	return (str);
@@ -68,7 +70,7 @@ char	**ft_split(char const *s, char c)
 	size_t	word_count;
 
 	i = 0;
-	word_count = count_word(s, c);
+	word_count = count_words(s, c);
 	array = malloc(sizeof(char *) * (word_count + 1));
 	if (array == NULL)
 		return (NULL);
