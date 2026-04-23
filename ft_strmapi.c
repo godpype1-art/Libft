@@ -1,40 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/04/23 16:23:05 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/23 20:36:37 by falves-e         ###   ########.fr       */
+/*   Created: 2026/04/23 20:08:52 by falves-e          #+#    #+#             */
+/*   Updated: 2026/04/23 20:35:00 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_sign_putnbr_fd(int n, int fd)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char	c;
-	int		sign;
+	int		len;
+	char	*array;
+	int		i;
 
-	sign = 2 * (n >= 0) - 1;
-	if (n >= -9 && n <= 9)
+	i = 0;
+	len = ft_strlen(s);
+	array = malloc(sizeof(char) * (len + 1));
+	if (array == NULL)
+		return (NULL);
+	while (array[i] && i < len)
 	{
-		c = '0' + (sign * n);
-		write(fd, c, 1);
+		array[i] = f(i, s[i]);
+		i++;
 	}
-	else
-	{
-		ft_putnbr_fd(n / 10, fd);
-		ft_putnbr_fd(n % 10, fd);
-	}
-	return ;
-}
-
-static	void	ft_putnbr_fd(int n, int fd)
-{
-	if (n < 0)
-		ft_putchar_fd('-', fd);
-	ft_sign_putnbr(n, fd);
-	return ;
+	array[i] = '\0';
+	return (array);
 }

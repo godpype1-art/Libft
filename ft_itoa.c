@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 17:43:41 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/23 18:53:28 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/23 20:38:44 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,6 @@ static char	*put_positive(char *str, int n, int len)
 	return (str);
 }
 
-
 char	*ft_itoa(int n)
 {
 	int		len;
@@ -61,5 +60,5 @@ char	*ft_itoa(int n)
 	else
 		put_positive(str, n, len);
 	str[len + 1 + (sign < 0)] = '\0';
-	return (str);	
+	return (str);
 }
