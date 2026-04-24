@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/16 18:14:31 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/23 22:41:01 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/24 11:34:34 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	array = malloc(nmemb * size);
 	if (array == NULL)
 		return (NULL);
-	ft_bzero(array, nmemb);
+	ft_bzero(array, nmemb * size);
 	return (array);
 }

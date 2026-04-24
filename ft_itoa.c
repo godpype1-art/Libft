@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 17:43:41 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/23 20:38:44 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/24 12:15:13 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_itoa(int n)
 	int		temp;
 
 	temp = n;
-	sign = 2 * (temp >= 0) - 1;
+	sign = 2 * (n >= 0) - 1;
 	len = 1;
 	while (temp < -9 || temp > 9)
 	{
@@ -59,6 +59,6 @@ char	*ft_itoa(int n)
 		put_negative(str, n, len);
 	else
 		put_positive(str, n, len);
-	str[len + 1 + (sign < 0)] = '\0';
+	str[len + (sign < 0)] = '\0';
 	return (str);
 }

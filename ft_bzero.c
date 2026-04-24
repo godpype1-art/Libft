@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 15:55:20 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/21 17:03:34 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/24 11:35:19 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_bzero(void *s, size_t n)
 	size_t			i;
 
 	i = 0;
-	ptr = s;
+	ptr = (unsigned char *)s;
 	while (i < n)
 	{
 		ptr[i] = '\0';
