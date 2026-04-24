@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 15:58:30 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/24 17:40:36 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/24 19:14:09 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,11 @@ int		ft_isprint(char c);
 char	*ft_itoa(int n);
 void	ft_lstadd_back(t_list **lst, t_list *new);
 void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstclear(t_list **lst, void (*del)(void *));
 void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
 t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 t_list	*ft_lstnew(void *content);
 int		ft_lstsize(t_list *lst);
 void	*ft_memchr(const void *s, int c, size_t n);
