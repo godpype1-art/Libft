@@ -2,6 +2,15 @@
 
 # Libft
 
+## Table of Contents
+
+- [Description](#description)
+- [Library Overview](#library-overview)
+- [Instructions](#instructions)
+- [Resources](#resources)
+
+---
+
 ## Description
 
 **Libft** is a custom C library developed as part of the 42 curriculum.  
@@ -20,11 +29,11 @@ All functions follow La Norme (42's coding standard) and are compiled with -Wall
 
 ## Library Overview
 
-Each function has the prefix `ft_`
+Each function has the prefix `ft_`.
 
 ### Part 1 - Libc Functions
 
-Reimplementation of standard functions
+Reimplementation of C standard functions.
 
 |  Function  | Description                                           | Return Value 					  |
 |:----------:|:------------------------------------------------------|:-----------------------------------|
@@ -35,7 +44,7 @@ Reimplementation of standard functions
 |`ft_isalpha`| Checks if a character is alphabetic.					 |  Returns `1` if true, `0` if false.|
 |`ft_isascii`| Checks if a character is within the ASCII range.		 |  Returns `1` if true, `0` if false.|
 |`ft_isdigit`| Checks if a character is a digit.					 |  Returns `1` if true, `0` if false.|
-|`ft_print`  | Checks if a character is printable.					 |  Returns `1` if true, `0` if false.|
+|`ft_isprint`  | Checks if a character is printable.				 |  Returns `1` if true, `0` if false.|
 |`ft_memchr` | Searches for a byte in memory.						 |  Pointer to found byte or `NULL`.  |
 |`ft_memcmp` | Compares two memory areas.							 |  Negative, zero, or positive value.|
 |`ft_memcpy` | Copies memory from source to destination.			 |  Returns destination pointer.	  |
@@ -54,23 +63,23 @@ Reimplementation of standard functions
 
 ---
 
-### Part 2 - Adicional Functions
+### Part 2 - Additional Functions
 
 Functions not present in libc or implemented differently
 
-| Function      | Description 												 | Return Value					 |
-|:-------------:|:-----------------------------------------------------------|:------------------------------|
-|`ft_itoa`      | Converts an integer to a string.							 |  New allocated string or NULL.|
-|`ft_putchar_fd`| Writes a character to a file descriptor.					 |  No return value.			 |
-|`ft_putendl_fd`| Writes a string followed by a newline to a file descriptor.|  No return value.			 |
-|`ft_putnbr_fd` | Writes an integer to a file descriptor. 					 |  No return value.			 |
-|`ft_putstr_fd` | Writes a string to a file descriptor.						 |  No return value.			 |
-|`ft_split`     | Splits a string into an array using a delimiter.			 |  Array of strings or NULL.	 |
-|`ft_striteri`  | Applies a function to each character (in place).			 |  No return value.			 |
-|`ft_strjoin`   | Concatenates two strings into a new one.				  	 |  New allocated string or NULL.|
-|`ft_strmapi`   | Applies a function to each character (new string).		 |  New allocated string or NULL.|
-|`ft_strtrim`   | Trims characters from the beginning and end.				 |  New allocated string or NULL.|
-|`ft_substr`    | Extracts a substring from a string.						 |  New allocated string or NULL.|
+| Function      | Description 												 | Return Value					   |
+|:-------------:|:-----------------------------------------------------------|:--------------------------------|
+|`ft_itoa`      | Converts an integer to a string.							 |  New allocated string or `NULL`.|
+|`ft_putchar_fd`| Writes a character to a file descriptor.					 |  No return value.			   |
+|`ft_putendl_fd`| Writes a string followed by a newline to a file descriptor.|  No return value.			   |
+|`ft_putnbr_fd` | Writes an integer to a file descriptor. 					 |  No return value.			   |
+|`ft_putstr_fd` | Writes a string to a file descriptor.						 |  No return value.			   |
+|`ft_split`     | Splits a string into an array using a delimiter.			 |  Array of strings or `NULL`.	   |
+|`ft_striteri`  | Applies a function to each character (in place).			 |  No return value.			   |
+|`ft_strjoin`   | Concatenates two strings into a new one.				  	 |  New allocated string or `NULL`.|
+|`ft_strmapi`   | Applies a function to each character (new string).		 |  New allocated string or `NULL`.|
+|`ft_strtrim`   | Trims characters from the beginning and end.				 |  New allocated string or `NULL`.|
+|`ft_substr`    | Extracts a substring from a string.						 |  New allocated string or `NULL`.|
 
 
 ---
@@ -91,6 +100,8 @@ Singly linked list manipulation functions
 |`ft_lstnew`	  | Creates a new node.						  |  New node or `NULL`.  |
 |`ft_lstsize`	  | Counts the number of nodes.				  |  Number of nodes.     |
 
+---
+
 ## Instructions
 
 ### Compilation
@@ -98,4 +109,53 @@ Singly linked list manipulation functions
 To compile the library, run:
 
 ```bash
+git clone <repository_url> <project_folder>
+cd <project_folder>
 make
+```
+
+The library `libft.a` is created at the root of the repository.
+
+
+Include in your *.c files:
+
+```c
+#include "libft.h"
+```
+ 
+ Compile with:
+
+ ```bash
+ cc <your_file.c> -L. -lft -o <your_program>
+```
+----
+
+### Available Makefile Rules
+
+```bash
+make all/make	# Compiles the library
+make clean		# Removes object files (.o)
+make fclean		# Removes object files (.o) and library file (.a)
+make re			# Removes object files (.o) and library file (.a) and rebuilds
+```
+
+---
+
+## Resources
+
+### Documentation & Tools
+
+- Manual pages `man`
+
+- [LibftTester by Tripouille](https://github.com/Tripouille/libftTester)
+
+- The C Programming Language - Brian Kernighan & Dennis Ritchie
+
+
+### AI
+
+- AI tools were used throughout this project to verify behavior of functions, improve documentation structure and also as a search engine.
+
+- This project does not include any code generated by an AI.
+
+- AI was used to help write this readme.
