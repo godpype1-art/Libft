@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/24 19:13:09 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/24 19:48:16 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/27 16:20:08 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,11 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*head;
 	t_list	*new;
-	
+
 	if (lst == NULL || f == NULL || del == NULL)
 		return (NULL);
 	head = NULL;
-	while(lst)
+	while (lst)
 	{
 		new = ft_lstnew(f(lst->content));
 		if (new == NULL)
