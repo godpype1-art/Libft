@@ -6,14 +6,13 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 15:58:30 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/29 13:47:50 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/29 14:38:38 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H 
 # define LIBFT_H
 
-/* # include <stdio.h> */
 # include <stdlib.h>
 # include <stdint.h>
 # include <unistd.h>
