@@ -6,13 +6,13 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/10 17:00:58 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/21 16:47:52 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/29 13:20:42 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(char c)
+int	ft_isalpha(int c)
 {
 	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
 		return (1);

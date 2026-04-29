@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 13:51:49 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/14 16:05:27 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/29 13:44:35 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_memset(void *s, int c, size_t n)
 
 	ptr = s;
 	i = 0;
-	while (ptr && i < n)
+	while (i < n)
 	{
 		ptr[i] = (unsigned char)c;
 		i++;

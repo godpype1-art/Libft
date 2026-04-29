@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 14:24:25 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/20 19:20:05 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/29 13:19:16 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlen(const char *s)
 	int	len;
 
 	len = 0;
-	while (s && s[len] != '\0')
+	while (s[len] != '\0')
 		len++;
 	return (len);
 }

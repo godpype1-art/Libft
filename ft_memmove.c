@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 17:19:46 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/16 15:10:47 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/29 14:07:57 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,12 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	size_t				i;
-	const unsigned char	*origin;
-	unsigned char		*final;
+	size_t			i;
+	unsigned char	*origin;
+	unsigned char	*final;
 
 	i = 0;
-	origin = (const unsigned char *) src;
+	origin = (unsigned char *) src;
 	final = (unsigned char *) dest;
 	if (final < origin)
 	{

@@ -6,13 +6,13 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/13 14:22:42 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/14 16:07:15 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/29 13:20:22 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isprint(char c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 126)
 		return (1);

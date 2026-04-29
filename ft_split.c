@@ -6,7 +6,7 @@
 /*   By: falves-e <falves-e@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/21 18:40:56 by falves-e          #+#    #+#             */
-/*   Updated: 2026/04/24 16:38:22 by falves-e         ###   ########.fr       */
+/*   Updated: 2026/04/29 14:29:46 by falves-e         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,17 @@
 
 static size_t	count_words(char const *s, char c)
 {
-	size_t	i;
-	size_t	word_count;
-	int		in_word;
+	int	word_count;
 
 	word_count = 0;
-	i = 0;
-	in_word = 0;
-	while (s[i] != '\0')
+	while (*s)
 	{
-		if (s[i] != c && in_word == 0)
-		{
-			in_word = 1;
+		while (*s == c)
+			s++;
+		if (*s)
 			word_count++;
-		}
-		else if (s[i] == c)
-			in_word = 0;
-		i++;
+		while (*s != c && *s)
+			s++;
 	}
 	return (word_count);
 }
@@ -41,8 +35,6 @@ static char	*fill_word(char const *s, char c)
 	char	*str;
 
 	word_len = 0;
-	while (*s == c)
-		s++;
 	while (s[word_len] != c && s[word_len])
 		word_len++;
 	str = malloc(sizeof(char) * (word_len + 1));
